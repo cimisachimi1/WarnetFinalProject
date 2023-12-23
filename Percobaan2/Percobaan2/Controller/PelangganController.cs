@@ -13,17 +13,17 @@ namespace Percobaan2.Controller
 {
     public class PelangganController
     {
-        private AkunPelangganRepository? _repository;
-        public List<AkunPelanggan> ReadAll()
+        private PelangganRepository? _repository;
+        public List<Pelanggan> ReadAll()
         {
             // membuat objek collection
-            List<AkunPelanggan> list = new List<AkunPelanggan>();
+            List<Pelanggan> list = new List<Pelanggan>();
 
             // membuat objek context menggunakan blok using
             using (DbContext context = new DbContext())
             {
                 // membuat objek dari class repository
-                _repository = new AkunPelangganRepository(context);
+                _repository = new PelangganRepository(context);
 
                 // panggil method GetAll yang ada di dalam class repository
                 list = _repository.ReadAll();

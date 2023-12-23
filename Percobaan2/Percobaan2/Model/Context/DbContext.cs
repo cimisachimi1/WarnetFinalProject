@@ -28,7 +28,7 @@ namespace Percobaan2.Model.Context
                 //string dbName = @"D:\Database\DbPerpustakaan.mdb";
 
                 // 2. set lokasi database secara relative
-                string dbName = @"C:\Tugas\SEM 3\Pemrogramman lanjut\WarnetFP\Percobaan2\Percobaan2\Database\bilingwarnet.sql";
+                string dbName = @"C:\Tugas\SEM 3\Pemrogramman lanjut\Final Project\WarnetFinalProject\Percobaan2\Percobaan2\Database\warnetdb(1).sql";
 
                 // deklarasi variabel connectionString, ref: https://www.connectionstrings.com/
                 string connectionString = string.Format("Data Source={0};FailIfMissing=True", dbName);

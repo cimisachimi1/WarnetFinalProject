@@ -9,14 +9,25 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using System.Data.SQLite;
+using Percobaan2.Model.Entity;
+using Percobaan2.Controller;
 
 namespace Percobaan2.View
 {
     public partial class MainMenu : Form
     {
+
+        private List<Pelanggan> ListOfPelanggan = new List<Pelanggan>();
+
+        private PelangganController controller;
+
+
         public MainMenu()
         {
             InitializeComponent();
+
+            controller = new PelangganController();
+
             InisialisasiListView();
         }
 
@@ -30,10 +41,11 @@ namespace Percobaan2.View
             lvwAkun.View = System.Windows.Forms.View.Details;
             lvwAkun.FullRowSelect = true;
             lvwAkun.GridLines = true;
-            lvwAkun.Columns.Add("No.", 30, HorizontalAlignment.Center);
-            lvwAkun.Columns.Add("Username", 91, HorizontalAlignment.Center);
-            lvwAkun.Columns.Add("Nama", 170, HorizontalAlignment.Left);
+            lvwAkun.Columns.Add("No.", 91, HorizontalAlignment.Center);
+            lvwAkun.Columns.Add("ID_Pelanggan", 91, HorizontalAlignment.Center);
+            lvwAkun.Columns.Add("NamaPelanggan", 170, HorizontalAlignment.Left);
             lvwAkun.Columns.Add("email", 80, HorizontalAlignment.Center);
+            lvwAkun.Columns.Add("NomerHp", 91, HorizontalAlignment.Center);
 
             lvwTransaksi.View = System.Windows.Forms.View.Details;
             lvwTransaksi.FullRowSelect = true;
@@ -51,22 +63,53 @@ namespace Percobaan2.View
 
         private void button1_Click(object sender, EventArgs e)
         {
+            // kosongkan listview
+            lvwAkun.Items.Clear();
 
+            // panggil method ReadAll dan tampung datanya ke dalam collection
+            ListOfPelanggan = controller.ReadAll();
+
+            // ekstrak objek mhs dari collection
+            foreach (var mhs in ListOfPelanggan)
+            {
+                var noUrut = lvwAkun.Items.Count + 1;
+
+
+                var item = new ListViewItem(noUrut.ToString());
+
+                item.SubItems.Add(mhs.NamaPelanggan);
+                item.SubItems.Add(mhs.Email);
+                item.SubItems.Add(mhs.NomerHp);
+                // tampilkan data mhs ke listview
+                lvwAkun.Items.Add(item);
+            }
         }
 
-        private void lstTransaksi_SelectedIndexChanged(object sender, EventArgs e)
+        private void button1_Click_1(object sender, EventArgs e)
         {
+            // kosongkan listview
+            lvwAkun.Items.Clear();
 
-        }
+            // panggil method ReadAll dan tampung datanya ke dalam collection
+            ListOfPelanggan = controller.ReadAll();
 
-        private void lvwTransaksi_SelectedIndexChanged(object sender, EventArgs e)
-        {
+            // ekstrak objek mhs dari collection
+            foreach (var mhs in ListOfPelanggan)
+            {
+                var noUrut = lvwAkun.Items.Count + 1;
 
-        }
 
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
+                var item = new ListViewItem(noUrut.ToString());
 
+                item.SubItems.Add(mhs.NamaPelanggan);
+                item.SubItems.Add(mhs.Email);
+                item.SubItems.Add(mhs.NomerHp);
+                // tampilkan data mhs ke listview
+                lvwAkun.Items.Add(item);
+            }
         }
     }
+
+
 }
+

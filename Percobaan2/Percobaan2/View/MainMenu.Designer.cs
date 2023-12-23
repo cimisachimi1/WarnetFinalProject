@@ -35,18 +35,18 @@
             tabPage6 = new TabPage();
             lvwAkun = new ListView();
             comboBox1 = new ComboBox();
-            button1 = new Button();
+            btnCariAkun = new Button();
             textBox2 = new TextBox();
             tabPage7 = new TabPage();
+            btnCariTransaksi = new Button();
+            txtCariTransaksi = new TextBox();
+            cmbCariTransaksi = new ComboBox();
+            label2 = new Label();
+            label1 = new Label();
+            dateTimePicker2 = new DateTimePicker();
+            dateTimePicker1 = new DateTimePicker();
             lvwTransaksi = new ListView();
             tabPage1 = new TabPage();
-            dateTimePicker1 = new DateTimePicker();
-            dateTimePicker2 = new DateTimePicker();
-            label1 = new Label();
-            label2 = new Label();
-            cmbCariTransaksi = new ComboBox();
-            txtCariTransaksi = new TextBox();
-            btnCariTransaksi = new Button();
             tabControl1.SuspendLayout();
             tabPage5.SuspendLayout();
             groupBox1.SuspendLayout();
@@ -100,7 +100,7 @@
             // 
             tabPage6.Controls.Add(lvwAkun);
             tabPage6.Controls.Add(comboBox1);
-            tabPage6.Controls.Add(button1);
+            tabPage6.Controls.Add(btnCariAkun);
             tabPage6.Controls.Add(textBox2);
             tabPage6.Location = new Point(4, 26);
             tabPage6.Name = "tabPage6";
@@ -128,16 +128,16 @@
             comboBox1.Size = new Size(180, 25);
             comboBox1.TabIndex = 11;
             // 
-            // button1
+            // btnCariAkun
             // 
-            button1.Location = new Point(130, 37);
-            button1.Margin = new Padding(4, 3, 4, 3);
-            button1.Name = "button1";
-            button1.Size = new Size(57, 27);
-            button1.TabIndex = 10;
-            button1.Text = "Cari";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            btnCariAkun.Location = new Point(130, 37);
+            btnCariAkun.Margin = new Padding(4, 3, 4, 3);
+            btnCariAkun.Name = "btnCariAkun";
+            btnCariAkun.Size = new Size(57, 27);
+            btnCariAkun.TabIndex = 10;
+            btnCariAkun.Text = "Cari";
+            btnCariAkun.UseVisualStyleBackColor = true;
+            btnCariAkun.Click += button1_Click_1;
             // 
             // textBox2
             // 
@@ -165,57 +165,21 @@
             tabPage7.Text = "Transaksi";
             tabPage7.UseVisualStyleBackColor = true;
             // 
-            // lvwTransaksi
+            // btnCariTransaksi
             // 
-            lvwTransaksi.Location = new Point(7, 42);
-            lvwTransaksi.Name = "lvwTransaksi";
-            lvwTransaksi.Size = new Size(1000, 481);
-            lvwTransaksi.TabIndex = 14;
-            lvwTransaksi.UseCompatibleStateImageBehavior = false;
-            lvwTransaksi.SelectedIndexChanged += lvwTransaksi_SelectedIndexChanged;
+            btnCariTransaksi.Location = new Point(911, 13);
+            btnCariTransaksi.Name = "btnCariTransaksi";
+            btnCariTransaksi.Size = new Size(75, 23);
+            btnCariTransaksi.TabIndex = 20;
+            btnCariTransaksi.Text = "CARI";
+            btnCariTransaksi.UseVisualStyleBackColor = true;
             // 
-            // tabPage1
+            // txtCariTransaksi
             // 
-            tabPage1.Location = new Point(4, 26);
-            tabPage1.Name = "tabPage1";
-            tabPage1.Padding = new Padding(3);
-            tabPage1.Size = new Size(1098, 529);
-            tabPage1.TabIndex = 7;
-            tabPage1.Text = "Layanan Tambahan";
-            tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // dateTimePicker1
-            // 
-            dateTimePicker1.Location = new Point(53, 11);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(241, 25);
-            dateTimePicker1.TabIndex = 15;
-            dateTimePicker1.ValueChanged += dateTimePicker1_ValueChanged;
-            // 
-            // dateTimePicker2
-            // 
-            dateTimePicker2.Location = new Point(359, 10);
-            dateTimePicker2.Name = "dateTimePicker2";
-            dateTimePicker2.Size = new Size(241, 25);
-            dateTimePicker2.TabIndex = 16;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(13, 14);
-            label1.Name = "label1";
-            label1.Size = new Size(34, 19);
-            label1.TabIndex = 17;
-            label1.Text = "Dari";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(300, 13);
-            label2.Name = "label2";
-            label2.Size = new Size(53, 19);
-            label2.TabIndex = 17;
-            label2.Text = "Sampai";
+            txtCariTransaksi.Location = new Point(774, 11);
+            txtCariTransaksi.Name = "txtCariTransaksi";
+            txtCariTransaksi.Size = new Size(121, 25);
+            txtCariTransaksi.TabIndex = 19;
             // 
             // cmbCariTransaksi
             // 
@@ -226,21 +190,55 @@
             cmbCariTransaksi.Size = new Size(121, 25);
             cmbCariTransaksi.TabIndex = 18;
             // 
-            // txtCariTransaksi
+            // label2
             // 
-            txtCariTransaksi.Location = new Point(774, 11);
-            txtCariTransaksi.Name = "txtCariTransaksi";
-            txtCariTransaksi.Size = new Size(121, 25);
-            txtCariTransaksi.TabIndex = 19;
+            label2.AutoSize = true;
+            label2.Location = new Point(300, 13);
+            label2.Name = "label2";
+            label2.Size = new Size(53, 19);
+            label2.TabIndex = 17;
+            label2.Text = "Sampai";
             // 
-            // btnCariTransaksi
+            // label1
             // 
-            btnCariTransaksi.Location = new Point(911, 13);
-            btnCariTransaksi.Name = "btnCariTransaksi";
-            btnCariTransaksi.Size = new Size(75, 23);
-            btnCariTransaksi.TabIndex = 20;
-            btnCariTransaksi.Text = "CARI";
-            btnCariTransaksi.UseVisualStyleBackColor = true;
+            label1.AutoSize = true;
+            label1.Location = new Point(13, 14);
+            label1.Name = "label1";
+            label1.Size = new Size(34, 19);
+            label1.TabIndex = 17;
+            label1.Text = "Dari";
+            // 
+            // dateTimePicker2
+            // 
+            dateTimePicker2.Location = new Point(359, 10);
+            dateTimePicker2.Name = "dateTimePicker2";
+            dateTimePicker2.Size = new Size(241, 25);
+            dateTimePicker2.TabIndex = 16;
+            // 
+            // dateTimePicker1
+            // 
+            dateTimePicker1.Location = new Point(53, 11);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.Size = new Size(241, 25);
+            dateTimePicker1.TabIndex = 15;
+            // 
+            // lvwTransaksi
+            // 
+            lvwTransaksi.Location = new Point(7, 42);
+            lvwTransaksi.Name = "lvwTransaksi";
+            lvwTransaksi.Size = new Size(1000, 481);
+            lvwTransaksi.TabIndex = 14;
+            lvwTransaksi.UseCompatibleStateImageBehavior = false;
+            // 
+            // tabPage1
+            // 
+            tabPage1.Location = new Point(4, 26);
+            tabPage1.Name = "tabPage1";
+            tabPage1.Padding = new Padding(3);
+            tabPage1.Size = new Size(1098, 529);
+            tabPage1.TabIndex = 7;
+            tabPage1.Text = "Layanan Tambahan";
+            tabPage1.UseVisualStyleBackColor = true;
             // 
             // MainMenu
             // 
@@ -269,7 +267,7 @@
         private TabPage tabPage6;
         private ListView lvwAkun;
         private ComboBox comboBox1;
-        private Button button1;
+        private Button btnCariAkun;
         private TextBox textBox2;
         private TabPage tabPage7;
         private TabPage tabPage1;
