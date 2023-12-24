@@ -46,7 +46,6 @@ C:\Tugas\SEM 3\Pemrogramman lanjut\Final Project\WarnetFinalProject\Percobaan2\P
 C:\Tugas\SEM 3\Pemrogramman lanjut\Final Project\WarnetFinalProject\Percobaan2\Percobaan2\obj\Debug\net6.0-windows\Percobaan2.Properties.Resources.resources
 C:\Tugas\SEM 3\Pemrogramman lanjut\Final Project\WarnetFinalProject\Percobaan2\Percobaan2\obj\Debug\net6.0-windows\Percobaan2.View.Login.resources
 C:\Tugas\SEM 3\Pemrogramman lanjut\Final Project\WarnetFinalProject\Percobaan2\Percobaan2\obj\Debug\net6.0-windows\Percobaan2.View.LoginGagal.resources
-C:\Tugas\SEM 3\Pemrogramman lanjut\Final Project\WarnetFinalProject\Percobaan2\Percobaan2\obj\Debug\net6.0-windows\Percobaan2.View.MainMenu.resources
 C:\Tugas\SEM 3\Pemrogramman lanjut\Final Project\WarnetFinalProject\Percobaan2\Percobaan2\obj\Debug\net6.0-windows\Percobaan2.csproj.GenerateResource.cache
 C:\Tugas\SEM 3\Pemrogramman lanjut\Final Project\WarnetFinalProject\Percobaan2\Percobaan2\obj\Debug\net6.0-windows\Percobaan2.GeneratedMSBuildEditorConfig.editorconfig
 C:\Tugas\SEM 3\Pemrogramman lanjut\Final Project\WarnetFinalProject\Percobaan2\Percobaan2\obj\Debug\net6.0-windows\Percobaan2.AssemblyInfoInputs.cache
@@ -58,7 +57,6 @@ C:\Tugas\SEM 3\Pemrogramman lanjut\Final Project\WarnetFinalProject\Percobaan2\P
 C:\Tugas\SEM 3\Pemrogramman lanjut\Final Project\WarnetFinalProject\Percobaan2\Percobaan2\obj\Debug\net6.0-windows\Percobaan2.pdb
 C:\Tugas\SEM 3\Pemrogramman lanjut\Final Project\WarnetFinalProject\Percobaan2\Percobaan2\obj\Debug\net6.0-windows\Percobaan2.genruntimeconfig.cache
 C:\Tugas\SEM 3\Pemrogramman lanjut\Final Project\WarnetFinalProject\Percobaan2\Percobaan2\obj\Debug\net6.0-windows\ref\Percobaan2.dll
-C:\Tugas\SEM 3\Pemrogramman lanjut\Final Project\WarnetFinalProject\Percobaan2\Percobaan2\obj\Debug\net6.0-windows\Percobaan2.View.Testing.resources
 C:\Tugas\SEM 3\Pemrogramman lanjut\Final Project\WarnetFinalProject\Percobaan2\Percobaan2\bin\Debug\net6.0-windows\BouncyCastle.Cryptography.dll
 C:\Tugas\SEM 3\Pemrogramman lanjut\Final Project\WarnetFinalProject\Percobaan2\Percobaan2\bin\Debug\net6.0-windows\Google.Protobuf.dll
 C:\Tugas\SEM 3\Pemrogramman lanjut\Final Project\WarnetFinalProject\Percobaan2\Percobaan2\bin\Debug\net6.0-windows\K4os.Compression.LZ4.dll
@@ -78,5 +76,6 @@ C:\Tugas\SEM 3\Pemrogramman lanjut\Final Project\WarnetFinalProject\Percobaan2\P
 C:\Tugas\SEM 3\Pemrogramman lanjut\Final Project\WarnetFinalProject\Percobaan2\Percobaan2\bin\Debug\net6.0-windows\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
 C:\Tugas\SEM 3\Pemrogramman lanjut\Final Project\WarnetFinalProject\Percobaan2\Percobaan2\bin\Debug\net6.0-windows\NuGet.Frameworks.dll
 C:\Tugas\SEM 3\Pemrogramman lanjut\Final Project\WarnetFinalProject\Percobaan2\Percobaan2\obj\Debug\net6.0-windows\Percobaan2.sourcelink.json
-C:\Tugas\SEM 3\Pemrogramman lanjut\Final Project\WarnetFinalProject\Percobaan2\Percobaan2\obj\Debug\net6.0-windows\Percobaan2.view.FirstCustomControl.resources
-C:\Tugas\SEM 3\Pemrogramman lanjut\Final Project\WarnetFinalProject\Percobaan2\Percobaan2\obj\Debug\net6.0-windows\FastFoodDemo.Form1.resources
+C:\Tugas\SEM 3\Pemrogramman lanjut\Final Project\WarnetFinalProject\Percobaan2\Percobaan2\obj\Debug\net6.0-windows\Percobaan2.View.IsiKomputer.resources
+C:\Tugas\SEM 3\Pemrogramman lanjut\Final Project\WarnetFinalProject\Percobaan2\Percobaan2\obj\Debug\net6.0-windows\Percobaan2.View.MenuUtama.resources
+C:\Tugas\SEM 3\Pemrogramman lanjut\Final Project\WarnetFinalProject\Percobaan2\Percobaan2\obj\Debug\net6.0-windows\Percobaan2.View.IsiAkun.resources
