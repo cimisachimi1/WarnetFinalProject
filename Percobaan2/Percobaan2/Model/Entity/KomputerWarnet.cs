@@ -8,7 +8,7 @@ namespace Percobaan2.Model.Entity
 {
     public class KomputerWarnet
     {
-        public int ID_Komputer { get; set; }
+        public string ID_Komputer { get; set; }
         public bool Ketersediaan { get; set; }
         public string Jenis_Komputer { get; set; }
     }

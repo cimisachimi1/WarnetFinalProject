@@ -28,10 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainMenu));
             tabControl1 = new TabControl();
             tabPage5 = new TabPage();
+            lvwKomputer = new ListView();
             groupBox1 = new GroupBox();
-            richTextBox1 = new RichTextBox();
             tabPage6 = new TabPage();
             lvwAkun = new ListView();
             comboBox1 = new ComboBox();
@@ -47,9 +49,14 @@
             dateTimePicker1 = new DateTimePicker();
             lvwTransaksi = new ListView();
             tabPage1 = new TabPage();
+            contextMenuStrip1 = new ContextMenuStrip(components);
+            button8 = new Button();
+            button1 = new Button();
+            button2 = new Button();
+            button3 = new Button();
+            panel1 = new Panel();
             tabControl1.SuspendLayout();
             tabPage5.SuspendLayout();
-            groupBox1.SuspendLayout();
             tabPage6.SuspendLayout();
             tabPage7.SuspendLayout();
             SuspendLayout();
@@ -61,40 +68,41 @@
             tabControl1.Controls.Add(tabPage7);
             tabControl1.Controls.Add(tabPage1);
             tabControl1.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            tabControl1.Location = new Point(1, 44);
+            tabControl1.Location = new Point(4, 4);
             tabControl1.Margin = new Padding(4, 3, 4, 3);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(1106, 559);
+            tabControl1.Size = new Size(1052, 558);
             tabControl1.TabIndex = 2;
             // 
             // tabPage5
             // 
+            tabPage5.Controls.Add(lvwKomputer);
             tabPage5.Controls.Add(groupBox1);
             tabPage5.Location = new Point(4, 26);
             tabPage5.Name = "tabPage5";
             tabPage5.Padding = new Padding(3);
-            tabPage5.Size = new Size(1098, 529);
+            tabPage5.Size = new Size(1044, 528);
             tabPage5.TabIndex = 4;
             tabPage5.Text = "Komputer";
             // 
+            // lvwKomputer
+            // 
+            lvwKomputer.Location = new Point(216, 23);
+            lvwKomputer.Name = "lvwKomputer";
+            lvwKomputer.Size = new Size(531, 368);
+            lvwKomputer.TabIndex = 1;
+            lvwKomputer.UseCompatibleStateImageBehavior = false;
+            lvwKomputer.SelectedIndexChanged += listView1_SelectedIndexChanged;
+            // 
             // groupBox1
             // 
-            groupBox1.Controls.Add(richTextBox1);
             groupBox1.Location = new Point(6, 6);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(122, 170);
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             groupBox1.Text = "PC-1";
-            // 
-            // richTextBox1
-            // 
-            richTextBox1.Location = new Point(6, 24);
-            richTextBox1.Name = "richTextBox1";
-            richTextBox1.Size = new Size(110, 46);
-            richTextBox1.TabIndex = 0;
-            richTextBox1.Text = "";
             // 
             // tabPage6
             // 
@@ -105,10 +113,11 @@
             tabPage6.Location = new Point(4, 26);
             tabPage6.Name = "tabPage6";
             tabPage6.Padding = new Padding(3);
-            tabPage6.Size = new Size(1098, 529);
+            tabPage6.Size = new Size(1044, 528);
             tabPage6.TabIndex = 5;
             tabPage6.Text = "Akun";
             tabPage6.UseVisualStyleBackColor = true;
+            tabPage6.Click += tabPage6_Click;
             // 
             // lvwAkun
             // 
@@ -137,7 +146,7 @@
             btnCariAkun.TabIndex = 10;
             btnCariAkun.Text = "Cari";
             btnCariAkun.UseVisualStyleBackColor = true;
-            btnCariAkun.Click += button1_Click_1;
+            btnCariAkun.Click += btnCariAkun_Click;
             // 
             // textBox2
             // 
@@ -160,7 +169,7 @@
             tabPage7.Location = new Point(4, 26);
             tabPage7.Name = "tabPage7";
             tabPage7.Padding = new Padding(3);
-            tabPage7.Size = new Size(1098, 529);
+            tabPage7.Size = new Size(1044, 528);
             tabPage7.TabIndex = 6;
             tabPage7.Text = "Transaksi";
             tabPage7.UseVisualStyleBackColor = true;
@@ -229,16 +238,105 @@
             lvwTransaksi.Size = new Size(1000, 481);
             lvwTransaksi.TabIndex = 14;
             lvwTransaksi.UseCompatibleStateImageBehavior = false;
+            lvwTransaksi.SelectedIndexChanged += lvwTransaksi_SelectedIndexChanged;
             // 
             // tabPage1
             // 
             tabPage1.Location = new Point(4, 26);
             tabPage1.Name = "tabPage1";
             tabPage1.Padding = new Padding(3);
-            tabPage1.Size = new Size(1098, 529);
+            tabPage1.Size = new Size(1044, 528);
             tabPage1.TabIndex = 7;
             tabPage1.Text = "Layanan Tambahan";
             tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // contextMenuStrip1
+            // 
+            contextMenuStrip1.Name = "contextMenuStrip1";
+            contextMenuStrip1.Size = new Size(61, 4);
+            // 
+            // button8
+            // 
+            button8.BackColor = SystemColors.WindowFrame;
+            button8.FlatAppearance.BorderSize = 0;
+            button8.FlatStyle = FlatStyle.Flat;
+            button8.Font = new Font("Century Gothic", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            button8.ForeColor = Color.White;
+            button8.Image = (Image)resources.GetObject("button8.Image");
+            button8.ImageAlign = ContentAlignment.MiddleLeft;
+            button8.Location = new Point(319, 34);
+            button8.Margin = new Padding(4, 3, 4, 3);
+            button8.Name = "button8";
+            button8.Size = new Size(144, 50);
+            button8.TabIndex = 8;
+            button8.Text = "Komputer";
+            button8.TextImageRelation = TextImageRelation.ImageBeforeText;
+            button8.UseVisualStyleBackColor = false;
+            button8.Click += button8_Click;
+            // 
+            // button1
+            // 
+            button1.BackColor = SystemColors.WindowFrame;
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Font = new Font("Century Gothic", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            button1.ForeColor = Color.White;
+            button1.Image = (Image)resources.GetObject("button1.Image");
+            button1.ImageAlign = ContentAlignment.MiddleLeft;
+            button1.Location = new Point(471, 34);
+            button1.Margin = new Padding(4, 3, 4, 3);
+            button1.Name = "button1";
+            button1.Size = new Size(144, 50);
+            button1.TabIndex = 8;
+            button1.Text = "Akun";
+            button1.TextImageRelation = TextImageRelation.ImageBeforeText;
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button8_Click;
+            // 
+            // button2
+            // 
+            button2.BackColor = SystemColors.WindowFrame;
+            button2.FlatAppearance.BorderSize = 0;
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.Font = new Font("Century Gothic", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            button2.ForeColor = Color.White;
+            button2.Image = (Image)resources.GetObject("button2.Image");
+            button2.ImageAlign = ContentAlignment.MiddleLeft;
+            button2.Location = new Point(623, 34);
+            button2.Margin = new Padding(4, 3, 4, 3);
+            button2.Name = "button2";
+            button2.Size = new Size(154, 50);
+            button2.TabIndex = 8;
+            button2.Text = "Layanan Tambahan";
+            button2.TextImageRelation = TextImageRelation.ImageBeforeText;
+            button2.UseVisualStyleBackColor = false;
+            button2.Click += button8_Click;
+            // 
+            // button3
+            // 
+            button3.BackColor = SystemColors.WindowFrame;
+            button3.FlatAppearance.BorderSize = 0;
+            button3.FlatStyle = FlatStyle.Flat;
+            button3.Font = new Font("Century Gothic", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            button3.ForeColor = Color.White;
+            button3.Image = (Image)resources.GetObject("button3.Image");
+            button3.ImageAlign = ContentAlignment.MiddleLeft;
+            button3.Location = new Point(785, 34);
+            button3.Margin = new Padding(4, 3, 4, 3);
+            button3.Name = "button3";
+            button3.Size = new Size(144, 50);
+            button3.TabIndex = 8;
+            button3.Text = "Transaksi";
+            button3.TextImageRelation = TextImageRelation.ImageBeforeText;
+            button3.UseVisualStyleBackColor = false;
+            button3.Click += button8_Click;
+            // 
+            // panel1
+            // 
+            panel1.Location = new Point(319, 123);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(789, 457);
+            panel1.TabIndex = 9;
             // 
             // MainMenu
             // 
@@ -246,11 +344,16 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1120, 615);
             Controls.Add(tabControl1);
+            Controls.Add(panel1);
+            Controls.Add(button3);
+            Controls.Add(button2);
+            Controls.Add(button1);
+            Controls.Add(button8);
             Name = "MainMenu";
             Text = "MainMenu";
+            Load += MainMenu_Load;
             tabControl1.ResumeLayout(false);
             tabPage5.ResumeLayout(false);
-            groupBox1.ResumeLayout(false);
             tabPage6.ResumeLayout(false);
             tabPage6.PerformLayout();
             tabPage7.ResumeLayout(false);
@@ -263,7 +366,6 @@
         private TabControl tabControl1;
         private TabPage tabPage5;
         private GroupBox groupBox1;
-        private RichTextBox richTextBox1;
         private TabPage tabPage6;
         private ListView lvwAkun;
         private ComboBox comboBox1;
@@ -279,5 +381,12 @@
         private DateTimePicker dateTimePicker2;
         private Button btnCariTransaksi;
         private TextBox txtCariTransaksi;
+        private ContextMenuStrip contextMenuStrip1;
+        private ListView lvwKomputer;
+        private Button button8;
+        private Button button1;
+        private Button button2;
+        private Button button3;
+        private Panel panel1;
     }
 }

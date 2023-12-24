@@ -10,5 +10,8 @@
     <Compile Update="View\Login.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="View\Testing.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

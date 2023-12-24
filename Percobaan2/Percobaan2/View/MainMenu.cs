@@ -8,9 +8,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-using System.Data.SQLite;
 using Percobaan2.Model.Entity;
 using Percobaan2.Controller;
+
+
 
 namespace Percobaan2.View
 {
@@ -19,16 +20,21 @@ namespace Percobaan2.View
 
         private List<Pelanggan> ListOfPelanggan = new List<Pelanggan>();
 
-        private PelangganController controller;
+        private PelangganController controllerPelanggan;
+        private List<KomputerWarnet> listOfKomputer = new List<KomputerWarnet>();
+        private KomputerWarnetController controllerKomputer;
 
 
         public MainMenu()
         {
             InitializeComponent();
 
-            controller = new PelangganController();
-
+            controllerPelanggan = new PelangganController();
+            controllerKomputer = new KomputerWarnetController();
             InisialisasiListView();
+            LoadDataKomputer();
+            LoadDataPelanggan();
+
         }
 
         private void lvwAkun_SelectedIndexChanged(object sender, EventArgs e)
@@ -58,56 +64,105 @@ namespace Percobaan2.View
             lvwTransaksi.Columns.Add("Waktu Terpakai", 80, HorizontalAlignment.Center);
             lvwTransaksi.Columns.Add("Staff", 80, HorizontalAlignment.Center);
 
+            lvwKomputer.View = System.Windows.Forms.View.Details;
+            lvwKomputer.FullRowSelect = true;
+            lvwKomputer.GridLines = true;
+
+            lvwKomputer.Columns.Add("No.", 35, HorizontalAlignment.Center);
+            lvwKomputer.Columns.Add("ID Komputer", 91, HorizontalAlignment.Center);
+            lvwKomputer.Columns.Add("Ketersediaan", 150, HorizontalAlignment.Center);
+            lvwKomputer.Columns.Add("Jenis Komputer", 150, HorizontalAlignment.Left);
 
         }
+
+        private void LoadDataKomputer()
+        {
+            lvwKomputer.Items.Clear();
+            listOfKomputer = controllerKomputer.ReadAll();
+
+            foreach (var komputer in listOfKomputer)
+            {
+                var noUrut = lvwKomputer.Items.Count + 1;
+
+                var item = new ListViewItem(noUrut.ToString());
+                item.SubItems.Add(komputer.ID_Komputer.ToString());
+                item.SubItems.Add(komputer.Ketersediaan.ToString());
+                item.SubItems.Add(komputer.Jenis_Komputer);
+
+                lvwKomputer.Items.Add(item);
+            }
+        }
+
+        private void LoadDataPelanggan()
+        {
+            // kosongkan listview
+            lvwAkun.Items.Clear();
+
+            // panggil method ReadAll dan tampung datanya ke dalam collection
+            ListOfPelanggan = controllerPelanggan.ReadAll();
+
+            // ekstrak objek mhs dari collection
+            foreach (var mhs in ListOfPelanggan)
+            {
+                var noUrut = lvwAkun.Items.Count + 1;
+
+
+                var item = new ListViewItem(noUrut.ToString());
+
+                item.SubItems.Add(mhs.NamaPelanggan);
+                item.SubItems.Add(mhs.Email);
+                item.SubItems.Add(mhs.NomerHp);
+                // tampilkan data mhs ke listview
+                lvwAkun.Items.Add(item);
+            }
+
+
+        }
+        private void btnCariAkun_Click(object sender, EventArgs e)
+        {
+
+        }
+
 
         private void button1_Click(object sender, EventArgs e)
         {
-            // kosongkan listview
-            lvwAkun.Items.Clear();
 
-            // panggil method ReadAll dan tampung datanya ke dalam collection
-            ListOfPelanggan = controller.ReadAll();
-
-            // ekstrak objek mhs dari collection
-            foreach (var mhs in ListOfPelanggan)
-            {
-                var noUrut = lvwAkun.Items.Count + 1;
-
-
-                var item = new ListViewItem(noUrut.ToString());
-
-                item.SubItems.Add(mhs.NamaPelanggan);
-                item.SubItems.Add(mhs.Email);
-                item.SubItems.Add(mhs.NomerHp);
-                // tampilkan data mhs ke listview
-                lvwAkun.Items.Add(item);
-            }
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private void btnCariAKun(object sender, EventArgs e)
         {
-            // kosongkan listview
-            lvwAkun.Items.Clear();
 
-            // panggil method ReadAll dan tampung datanya ke dalam collection
-            ListOfPelanggan = controller.ReadAll();
-
-            // ekstrak objek mhs dari collection
-            foreach (var mhs in ListOfPelanggan)
-            {
-                var noUrut = lvwAkun.Items.Count + 1;
-
-
-                var item = new ListViewItem(noUrut.ToString());
-
-                item.SubItems.Add(mhs.NamaPelanggan);
-                item.SubItems.Add(mhs.Email);
-                item.SubItems.Add(mhs.NomerHp);
-                // tampilkan data mhs ke listview
-                lvwAkun.Items.Add(item);
-            }
         }
+
+        private void tabPage6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lvwTransaksi_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MainMenu_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+
+            firstCustomControl1.BringToFront();
+        }
+
+
+
+
     }
 
 
