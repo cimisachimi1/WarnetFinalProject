@@ -7,6 +7,12 @@
     <Compile Update="View\IsiKomputer.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="View\IsiTransaksi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="View\Laporan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="View\LoginGagal.cs">
       <SubType>Form</SubType>
     </Compile>

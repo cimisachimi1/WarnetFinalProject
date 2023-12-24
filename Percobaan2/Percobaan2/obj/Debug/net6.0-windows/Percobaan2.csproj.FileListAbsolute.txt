@@ -79,3 +79,5 @@ C:\Tugas\SEM 3\Pemrogramman lanjut\Final Project\WarnetFinalProject\Percobaan2\P
 C:\Tugas\SEM 3\Pemrogramman lanjut\Final Project\WarnetFinalProject\Percobaan2\Percobaan2\obj\Debug\net6.0-windows\Percobaan2.View.IsiKomputer.resources
 C:\Tugas\SEM 3\Pemrogramman lanjut\Final Project\WarnetFinalProject\Percobaan2\Percobaan2\obj\Debug\net6.0-windows\Percobaan2.View.MenuUtama.resources
 C:\Tugas\SEM 3\Pemrogramman lanjut\Final Project\WarnetFinalProject\Percobaan2\Percobaan2\obj\Debug\net6.0-windows\Percobaan2.View.IsiAkun.resources
+C:\Tugas\SEM 3\Pemrogramman lanjut\Final Project\WarnetFinalProject\Percobaan2\Percobaan2\obj\Debug\net6.0-windows\Percobaan2.View.IsiTransaksi.resources
+C:\Tugas\SEM 3\Pemrogramman lanjut\Final Project\WarnetFinalProject\Percobaan2\Percobaan2\obj\Debug\net6.0-windows\Percobaan2.View.Laporan.resources
